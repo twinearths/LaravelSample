@@ -26,3 +26,8 @@ Route::get('/one', function () {
 Route::get('/two', function () {
     return view('screen2');
 });
+
+Route::get('/send', function () {
+    return view('sendScreen');
+});
+Route::post('/receive', 'App\Http\Controllers\MyController@send');

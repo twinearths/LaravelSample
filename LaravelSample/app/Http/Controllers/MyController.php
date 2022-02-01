@@ -11,4 +11,10 @@ class MyController extends Controller
 
         return view('simpleScreen');
     }
+
+    public function send(Request $req) {
+        $content = $req->content;
+        $data = [ 'content'  => $content ];
+        return view('receiveScreen', $data);
+    }
 }
