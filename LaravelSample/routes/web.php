@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/simple', 'App\Http\Controllers\MyController@simpleScreen');
+
+Route::get('/one', function () {
+    return view('screen1');
+});
+
+Route::get('/two', function () {
+    return view('screen2');
+});
