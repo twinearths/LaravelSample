@@ -31,3 +31,11 @@ Route::get('/send', function () {
     return view('sendScreen');
 });
 Route::post('/receive', 'App\Http\Controllers\MyController@send');
+
+Route:: get('/insertdb', 'App\Http\Controllers\MyController@insertdb');
+Route:: get('/updatedb', 'App\Http\Controllers\MyController@updatedb');
+Route:: get('/deletealldb', 'App\Http\Controllers\MyController@deletealldb');
+Route:: get('/deletedb', 'App\Http\Controllers\MyController@deletedb');
+Route:: get('/selectdb', 'App\Http\Controllers\MyController@selectdb');
+
+Route:: get('/sheet', 'App\Http\Controllers\SpreadSheetController@store');
