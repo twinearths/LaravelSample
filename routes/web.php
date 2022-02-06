@@ -39,3 +39,7 @@ Route:: get('/deletedb', 'App\Http\Controllers\MyController@deletedb');
 Route:: get('/selectdb', 'App\Http\Controllers\MyController@selectdb');
 
 Route:: get('/sheet', 'App\Http\Controllers\SpreadSheetController@store');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
