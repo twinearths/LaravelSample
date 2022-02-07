@@ -14,10 +14,9 @@ class SpreadSheet extends Model
         // GoogleClientインスタンスの生成
         $sheets = SpreadSheet::instance();
 
-        // SpreadSheetファイルの URLが
-        // https://docs.google.com/spreadsheets/d/×××××××××××××××××××/edit#gid=0
-        // である場合、××××××××××××××××××× の部分を以下に記入する
-        $sheet_id = '×××××××××××××××××××';
+        // SpreadSheet id は URLのこの ×××××××××××××× 部分です。
+        // https://docs.google.com/spreadsheets/d/××××××××××××××/edit#gid=0
+        $sheet_id = '××××××××××××××';
         $range = 'A1:F10';
         $response = $sheets->spreadsheets_values->get($sheet_id, $range);   
         // 格納する行の計算
