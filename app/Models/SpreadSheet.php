@@ -17,7 +17,7 @@ class SpreadSheet extends Model
         // SpreadSheetファイルの URLが
         // https://docs.google.com/spreadsheets/d/×××××××××××××××××××/edit#gid=0
         // である場合、××××××××××××××××××× の部分を以下に記入する
-        $sheet_id = '12m8EyDyDoNTRC7KGoSyz2n6g6fnuTsfEPMDMMAZzr2I';
+        $sheet_id = '×××××××××××××××××××';
         $range = 'A1:F10';
         $response = $sheets->spreadsheets_values->get($sheet_id, $range);   
         // 格納する行の計算
