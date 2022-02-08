@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('import-form');
 });
 
 Route::get('/simple', 'App\Http\Controllers\MyController@simpleScreen');
@@ -43,3 +43,10 @@ Route:: get('/sheet', 'App\Http\Controllers\SpreadSheetController@store');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/import', [App\Http\Controllers\ExcelDataController::class, 'import'])->name('exceldata.import');
+Route::get('/export', [App\Http\Controllers\ExcelDataController::class, 'exportIntoCSV'])->name('exceldata.export');
